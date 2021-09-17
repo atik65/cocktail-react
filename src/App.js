@@ -5,12 +5,7 @@ import About from "./components/About";
 import Cocktails from "./components/Cocktails";
 import Error from "./components/Error";
 import IndivisualCocktail from "./components/IndivisualCocktail";
-import {
-  BrowserRouter as Router,
-  HashRouter,
-  Route,
-  Switch,
-} from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -18,7 +13,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/about">

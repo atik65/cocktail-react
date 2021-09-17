@@ -100,7 +100,7 @@ const IndivisualCocktail = () => {
             <NavLink className=" back-button" to="/cocktails">
               Go to Cocktails <i className="fas fa-arrow-right    "></i>
             </NavLink>
-            <NavLink className=" back-button" to="/home">
+            <NavLink className=" back-button" to="/">
               <i className="fas fa-arrow-left    "></i> Go to Home
             </NavLink>
           </div>
