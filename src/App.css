@@ -274,8 +274,8 @@ font-family: "Alex Brush", cursive; */
   }
   .home {
     background-image: url(./images/cocktail-mobile.jpg);
-    height: calc(100vh - 54px);
-    background-color: black;
+    height: calc(100vh - 53.57px);
+    background-color: rgb(15, 15, 15);
   }
   .cocktail-house p {
     color: #ffffff;
@@ -292,7 +292,7 @@ font-family: "Alex Brush", cursive; */
     font-size: 16px;
   }
   .about {
-    height: calc(100vh - 54px);
+    height: calc(100vh - 53.57px);
   }
   /* cocktails style */
   .search-tab {
