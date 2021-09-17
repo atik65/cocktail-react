@@ -1,38 +1,330 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* font-family: "Akronim", cursive;
+font-family: "Alex Brush", cursive; */
+/* navbar style part  */
+.nav-body {
+  background-color: rgba(0, 0, 0, 0.952);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.nav ul {
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+}
+.nav li {
+  list-style-type: none;
+  padding: 15px 0;
+  margin: 0 10px;
+  position: relative;
+}
+.nav li:after {
+  content: "";
+  height: 2px;
+  width: 0px;
+
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.nav a {
+  padding: 0 50px;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.nav li:hover::after {
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: rgb(198, 230, 206);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 12px;
+  left: 25%;
+}
+.error {
+  background-color: rgba(0, 0, 0, 0.938);
+  color: #ffffff;
+  height: calc(100vh - 60px);
+  padding: 80px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* home part style from here */
+.home {
+  background-image: url(./images/cocktails.jpg);
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+}
+.cocktail-house {
+  padding-top: 5%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.472);
+}
+
+.cocktail-house h1 {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Akronim";
+  font-size: 60px;
+}
+
+.cocktail-house p {
+  color: #ffffff;
+  font-family: "actor";
+  font-size: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* About part style  */
+.about {
+  background-color: rgba(0, 0, 0, 0.979);
+  height: calc(100vh - 60px);
+}
+.about h2 {
+  padding-top: 40px;
+  text-align: center;
+  font-family: "Akronim";
+  color: #ffffff;
+  font-size: 60px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.about h2::after {
+  content: "";
+  height: 3px;
+  width: 25%;
+  position: absolute;
+  background-color: #ffffff;
+  left: 38%;
+  bottom: -10px;
+  border-radius: 4px;
+}
+
+.about p {
+  color: #ffffff;
+  font-family: "actor";
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* cocktails part style start */
+.cocktails {
+  background-color: rgba(0, 0, 0, 0.883);
+}
+
+.search-tab {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 40%;
+}
+
+.cocktail-list {
+  color: #ffffff;
+  padding: 10px 0;
+  width: 90%;
+  margin: 0 auto;
+  min-height: calc(100vh - 151px);
+}
+.all-cocktail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+.cocktail-title {
+  padding-bottom: 3px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: "akronim";
+  height: 50px;
+}
+.cocktail-title::after {
+  content: "";
+  height: 2px;
+  width: 10%;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  border-radius: 5px;
+}
+.loading {
+  min-height: calc(100vh - 151px);
+  text-align: center;
+  color: rgb(0, 204, 255);
+  font-size: 100px;
+}
+.info {
+  border: 1px solid lightblue;
+  padding: 5px 20px;
+  border-radius: 2px;
+}
+
+.single-cocktail:hover.single-cocktail img {
+  transform: scale(1.2);
+}
+
+.single-cocktail h6 {
+  padding: 10px 0;
+}
+.single-cocktail .name {
+  padding: 3px 8px;
+  border-radius: 3px;
+  background-color: rgba(144, 238, 144, 0.226);
+}
+.single-cocktail small {
+  border: rgb(255, 0, 212) 1px solid;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.single-cocktail a {
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  background-color: rgba(95, 243, 95, 0.842);
+  color: black;
+  padding: 0 10px;
+  border-radius: 2px;
+}
+.single-cocktail img {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* indivisual item style start */
+.indivisual {
+  background-color: rgba(0, 0, 0, 0.931);
+  color: #ffffff;
+  min-height: calc(100vh - 60px);
+  padding-bottom: 200px;
+}
+
+.indivisual section img {
+  width: 100%;
+  height: 50vh;
+}
+.indivisual section {
+  margin: 0 auto;
+  width: 50%;
+}
+.indivisual span {
+  padding: 0 10px;
+}
+.indivisual p {
+  padding: 15px 0;
+}
+.back-button {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: rgba(173, 216, 230, 0.233);
+
+  padding: 2px 10px;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+.back-button:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: rgba(173, 216, 230, 0.37);
+}
+
+.cock-info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  padding-bottom: 20px;
+}
+.cock-info h6 {
+  border: lightblue 1px solid;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+
+.cock-info h6:hover {
+  background-color: rgba(75, 8, 25, 0.329);
+}
+@media only screen and (max-width: 768px) {
+  /* navbar */
+  .nav a {
+    padding: 0 5px;
+    font-size: 16px;
+    height: 54px;
   }
-  to {
-    transform: rotate(360deg);
+  .home {
+    background-image: url(./images/cocktail-mobile.jpg);
+    height: calc(100vh - 54px);
+    background-color: black;
+  }
+  .cocktail-house p {
+    color: #ffffff;
+    font-family: "actor";
+    font-size: 16px;
+    width: 75%;
+    margin: 25px auto;
+  }
+  .about h2 {
+    font-size: 35px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+  .about {
+    height: calc(100vh - 54px);
+  }
+  /* cocktails style */
+  .search-tab {
+    padding: 30px 0;
+    width: 90%;
+  }
+  .all-cocktail {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .loading {
+    min-height: calc(100vh - 144px);
+    text-align: center;
+  }
+
+  .cocktail-list {
+    min-height: calc(100vh - 144px);
+  }
+
+  .indivisual {
+    background-color: rgba(0, 0, 0, 0.931);
+    color: #ffffff;
+    min-height: calc(100vh - 53.57px);
+    padding-bottom: 150px;
+  }
+
+  .indivisual section {
+    width: 80%;
+  }
+  .indivisual section img {
+    width: 100%;
+    height: 40vh;
   }
 }
