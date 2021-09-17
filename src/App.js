@@ -5,14 +5,19 @@ import About from "./components/About";
 import Cocktails from "./components/Cocktails";
 import Error from "./components/Error";
 import IndivisualCocktail from "./components/IndivisualCocktail";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  HashRouter,
+  Route,
+  Switch,
+} from "react-router-dom";
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        <Switch>
+        <HashRouter>
           <Route path="/home">
             <Home />
           </Route>
@@ -29,7 +34,7 @@ function App() {
           <Route>
             <Error />
           </Route>
-        </Switch>
+        </HashRouter>
       </Router>
     </>
   );
