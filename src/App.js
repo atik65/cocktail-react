@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path={process.env.PUBLIC_URL + "/"}>
+          <Route path="/home">
             <Home />
           </Route>
           <Route exact path="/about">
