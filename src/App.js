@@ -17,7 +17,7 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <HashRouter>
+        <Switch>
           <Route path="/home">
             <Home />
           </Route>
@@ -34,7 +34,7 @@ function App() {
           <Route>
             <Error />
           </Route>
-        </HashRouter>
+        </Switch>
       </Router>
     </>
   );
